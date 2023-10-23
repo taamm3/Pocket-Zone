@@ -5,7 +5,8 @@ public class Monster : Character
 {
     [SerializeField] private Camera _camera;
     [SerializeField] private float _speed = 1f;
-    [SerializeField] private int _damagePower = 5;
+    [SerializeField] private int _damageAmount = 5;
+    [SerializeField] private GameObject _item;
     private Player _player;
     private const float DELAY = 5f;
 
@@ -21,7 +22,7 @@ public class Monster : Character
     {
         _player = collision.gameObject.GetComponent<Player>();
 
-        if (_player.IsAlive)
+        if (_player && _player.IsAlive)
         {
             StartCoroutine(ContinuousAttack(DELAY));
         }
@@ -29,9 +30,9 @@ public class Monster : Character
 
     private IEnumerator ContinuousAttack(float delay)
     {
-        while (_player.IsAlive)
+        while (_player && _player.IsAlive)
         {
-            _player.TakeDamage(_damagePower);
+            _player.TakeDamage(_damageAmount);
             yield return new WaitForSeconds(delay);
         }
     }
@@ -60,7 +61,8 @@ public class Monster : Character
 
     protected override void Die()
     {
-        Destroy(this);
+        Instantiate(_item);
+        Destroy(gameObject);
     }
 
     public void SetCameraReference(Camera camera)

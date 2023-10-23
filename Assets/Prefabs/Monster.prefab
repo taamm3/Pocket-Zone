@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9205005082330104598}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6559406377417726533}
   - component: {fileID: 4295305204014603997}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4369915839624038410}
   - component: {fileID: 7154965852064591074}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 5033649334405233511}
   - component: {fileID: 6338448951791418202}
   - component: {fileID: 3122226950575712016}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 8810880446579422668}
   - component: {fileID: 8107142265217460265}
   - component: {fileID: 5679013158323459560}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,8 @@ MonoBehaviour:
   _healthImage: {fileID: 6272830017005637278}
   _camera: {fileID: 0}
   _speed: 1
-  _damagePower: 5
+  _damageAmount: 5
+  _item: {fileID: 5259372926543330091, guid: ec5a92fa212229840bd4278c081e0e00, type: 3}
 --- !u!50 &8107142265217460265
 Rigidbody2D:
   serializedVersion: 4
@@ -414,7 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3709762085574810642}
   - component: {fileID: 9156014001106589494}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,7 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8848487318613595466}
   - component: {fileID: 3651168601717548415}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9074858776987838714}
   - component: {fileID: 3018530865110163741}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -663,6 +664,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5682859328459736743}
     m_Modifications:
+    - target: {fileID: 1958243616151134992, guid: da584a1ce933ba54a928200530486282, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1958243616151134994, guid: da584a1ce933ba54a928200530486282, type: 3}
       propertyPath: m_Type
       value: 3
@@ -678,6 +683,10 @@ PrefabInstance:
     - target: {fileID: 1958243616592539628, guid: da584a1ce933ba54a928200530486282, type: 3}
       propertyPath: m_Name
       value: Health bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958243616592539628, guid: da584a1ce933ba54a928200530486282, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1958243616592539631, guid: da584a1ce933ba54a928200530486282, type: 3}
       propertyPath: m_Pivot.x

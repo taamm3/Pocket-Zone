@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,13 @@ public class GameManager : MonoBehaviour
 
     public Vector3 GetPlayerPosition()
     {
-        return _player.transform.position;
+        if (_player.IsAlive)
+        {
+            return _player.transform.position;
+        }
+        else
+        {
+            return Vector3.zero;
+        }
     }
 }

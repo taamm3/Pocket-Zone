@@ -751,6 +751,10 @@ PrefabInstance:
       propertyPath: m_ReferencePixelsPerUnit
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 3614036304974927229, guid: 87deb530b443e004cb651294f2440c1c, type: 3}
+      propertyPath: _fireButton
+      value: 
+      objectReference: {fileID: 1060123428}
     - target: {fileID: 6828285529671638934, guid: 87deb530b443e004cb651294f2440c1c, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -826,6 +830,18 @@ PrefabInstance:
     - target: {fileID: 7279185989690039589, guid: 87deb530b443e004cb651294f2440c1c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325137259976772008, guid: 87deb530b443e004cb651294f2440c1c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325137259976772008, guid: 87deb530b443e004cb651294f2440c1c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325137259976772008, guid: 87deb530b443e004cb651294f2440c1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.226
       objectReference: {fileID: 0}
     - target: {fileID: 8967852507865648583, guid: 87deb530b443e004cb651294f2440c1c, type: 3}
       propertyPath: m_Name
