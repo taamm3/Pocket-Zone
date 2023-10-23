@@ -4,6 +4,7 @@ public class MonsterCreator : MonoBehaviour
 {
     [SerializeField] private Transform _ground;
     [SerializeField] private GameObject _monsterPrefab;
+    [SerializeField] private Camera _camera;
     private const int NUMBER_OF_MONSTERS = 3;
 
     public void GenerateMonsters()
@@ -16,7 +17,8 @@ public class MonsterCreator : MonoBehaviour
             float xpos = Random.Range(-areaWidth, areaWidth);
             float ypos = Random.Range(-rectHeight, rectHeight);
             Vector3 pos = area.transform.position + new Vector3(xpos, ypos);
-            Instantiate(_monsterPrefab, pos, Quaternion.identity);
+            GameObject monster = Instantiate(_monsterPrefab, pos, Quaternion.identity);
+            monster.GetComponent<Monster>().SetCameraReference(_camera);
         }
     }
 }
