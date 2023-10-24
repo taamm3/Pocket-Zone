@@ -8,6 +8,7 @@ public class Player : Character
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private Weapon _weapon;
+    [SerializeField] private Inventory _inventory;
     public bool IsAlive { get; private set; } = true;
     private const string ITEM = "Item";
     private const string MONSTER = "Monster";
@@ -75,10 +76,14 @@ public class Player : Character
         IsAlive = false;
         Destroy(gameObject);
         Debug.Log("Game over");
+        _health = 100;
+        SaveToJson();
     }
 
-    private void TakeItem(GameObject item)
+    private void TakeItem(GameObject obj)
     {
-        //TODO: ADD ITEM TO INVENTORY
+        Item item = obj.GetComponent<Item>();
+        _inventory.AddItem(item);
+        Destroy(obj);
     }
 }

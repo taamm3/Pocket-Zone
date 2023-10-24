@@ -61,7 +61,7 @@ public class Monster : Character
 
     protected override void Die()
     {
-        Instantiate(_item);
+        Instantiate(_item, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
