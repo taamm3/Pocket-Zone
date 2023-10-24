@@ -36,4 +36,9 @@ public class GameManager : MonoBehaviour
             return Vector3.zero;
         }
     }
+
+    public void RemoveFromBag(int id)
+    {
+        _player.RemoveFromBag(id);
+    }
 }

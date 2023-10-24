@@ -32,8 +32,9 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    //public List<Item> GetItems()
-    //{
-    //    return _items;
-    //}
+    public void DeleteItem(int id)
+    {
+        Item itemToRemove = _items.Find(i => i.ItemID == id);
+        _items.Remove(itemToRemove);
+    }
 }
